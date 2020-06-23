@@ -12,6 +12,12 @@ body {
     background-color: #f0f0f0;
     font-family: "Courier New", Helvetica;
     color: #2c2b30;
+    scroll-behavior: smooth;
+    /* overflow: hidden; */
+}
+
+p {
+    display: inline;
 }
 
 .wrapper {
@@ -19,6 +25,8 @@ body {
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
+    border: solid #2c2b30;
+    border-width: 0 0.1em 0.1em 0;
 }
 
 /* code credit for blink to Will on Codepen https://codepen.io/haaswill/pen/VKzXvZ */
@@ -40,8 +48,8 @@ nav {
     box-shadow: 0.04em 0.04em #8a8a8a;
     position: fixed;
     padding: 2em;
-    width: 0.1em;
-    height: 0.1em;
+    width: 0.01em;
+    height: 0.01em;
     vertical-align: center;
     transition: ease 1s;
     font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -49,11 +57,16 @@ nav {
 }
 
 a {
-    opacity: 0;
-    text-decoration: line-through;
+    opacity: 0.5;
+    text-decoration: none;
     margin: 2em;
     transition: ease-out 1s;
 }
+
+/* a:hover {
+    opacity: 100;
+    text-decoration: none;
+} */
 
 nav:hover {
     background-color: #f0f0f0;
@@ -61,12 +74,18 @@ nav:hover {
     height: 4em;
 }
 
-@media(hover: hover) and (pointer: fine) {
+nav a:hover {
+    opacity: 100;
+    text-decoration: none;
+}
+
+
+/* @media(hover: hover) and (pointer: fine) {
     nav:hover a {
         opacity: 1;
         text-decoration: none;
     }
-}
+} */
 
 .red {
     background-color: #fbc1c1;
@@ -92,17 +111,56 @@ nav:hover {
 
 /* TITLE  */
 
+.greetings {
+    font-size: calc(14px + (25 - 14) * ((100vw - 300px) / (1600 - 300))); 
+}
+
 .title {
-    vertical-align: center;
+    color: #2c2b30;
+    opacity: 0.8;
+    /* vertical-align: center; */
+    min-height: 100vh;
 /* CREDIT TO CSS TRICKS FOR THIS LITTLE TRICK! 
 https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/ */
     font-size: calc(14px + (60 - 14) * ((100vw - 300px) / (1600 - 300)));
     padding: 1em;
-    color: #f0f0f0;
-    text-shadow: 0.03em 0.03em #8a8a8a;
+    /* text-shadow: 0.03em 0.03em #8a8a8a; */
     z-index: 10;
     transition: ease 1s;
 }
+
+.name {
+    position: fixed;
+    top: 1em;
+}
+
+.page {
+    scroll-behavior: smooth;
+    position: sticky;
+    top: 1em;
+    text-align: left;
+}
+
+.pages {
+    scroll-behavior: smooth;
+    position: sticky;
+    top: 3em;
+    text-align: left;
+}
+
+.arrow {
+    opacity: 1;
+    border: solid #2c2b30;
+    border-width: 0 0.05em 0.05em 0;
+    display: inline-block;
+    padding: 3px;
+    margin: 0 0 5em 0;
+  }
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
 
 /* TITLE COLOR LOOP  */
 /* Code credit: https://www.youtube.com/watch?v=NhwjIIO0_kY */
