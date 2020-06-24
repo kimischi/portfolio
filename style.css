@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #f0f0f0;
+    font-family: "Courier New", Helvetica;
+    color: #2c2b30;
+    scroll-behavior: smooth;
+}
+
+p {
+    display: inline;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* typewriter blink  */
+.blink {
+    animation: blink 0.5s infinite;
+  }
+  @keyframes blink{
+    to { opacity: .0; }
+  }
+
+  .flex {
+      display: flex;
+      justify-content: left;
+  }
+
+/* titles  */
+.title {
+    color: #2c2b30;
+    /* thank you CSS tricks for this little trick <3 
+    https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/ */
+    font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
+    opacity: 0.8;
+    min-height: 100vh;
+    padding: 1em;
+    /* text-shadow: 0.03em 0.03em white; */
+    z-index: 10;
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        font-size: calc(35px + (60 - 35) * ((100vw - 300px) / (1600 - 300))); 
+    }
+}
+
+.name {
+    position: fixed;
+    top: 1em;
+}
+
+.title_up {
+    scroll-behavior: smooth;
+    position: sticky;
+    top: 1em;
+    text-align: left;
+}
+
+.title_down {
+    scroll-behavior: smooth;
+    position: sticky;
+    top: 3em;
+    text-align: left;
+}
+
+/* page title colors  */
+
+/* section header:nth-child(1) { 
+    text-shadow: 0.03em 0.03em #edc4bc;
+} */
+
+/* .about_title {
+    text-shadow: 0.03em 0.03em #edc4bc;
+}
+
+.work_title {
+    text-shadow: 0.03em 0.03em #b7e5d5;
+}
+
+.projects_title {
+    text-shadow: 0.03em 0.03em #b4d5f9;
+}
+
+.contact_title {
+    text-shadow: 0.03em 0.03em #cfc5f6;
+} */
+
+/* bottom right corner border */
+/* .pages {
+    display: flex;
+    position: fixed;
+    opacity: 0.8;
+    width: 48em;
+    height: 20em;
+    left: 70em;
+    top: 40em;
+    border: solid #2c2b30;
+    border-width: 0 0.2em 0.2em 0;
+    justify-content: center;
+    text-justify: center;
+    z-index: 10;
+
+} */
+
+/* arrow  */
+.arrow {
+    opacity: 1;
+    border: solid #2c2b30;
+    border-width: 0 0.05em 0.05em 0;
+    display: inline-block;
+    padding: 3px;
+    /* text-shadow: 0.03em 0.03em white; */
+    margin: 0 0 5em 0;
+  }
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+/* content */
+.content {
+    font-size: calc(14px + (35 - 14) * ((100vw - 300px) / (1600 - 300)));
+    position: relative;
+    /* left: 18em;
+    top: 10em; */
+    padding-left: 18em;
+    padding-top: 7em;
+    max-width: 26em;
+    justify-content: left;
+    text-align: left;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
+        padding-top: 7em;
+        padding-left: 0;
+    }
+    
+}
+
+.image {
+    position: relative;
+    left: 10em;
+    top: -1em;
+}
