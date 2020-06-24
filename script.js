@@ -1,7 +1,7 @@
 
 // code credit to Will on Codepen https://codepen.io/haaswill/pen/VKzXvZ
 
-const words = [" imchi", " imischi", " imchischmimchi"];
+const words = [" chi", " ischi", " chischmimchi"];
 let i = 0;
 let timer;
 

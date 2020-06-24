@@ -11,7 +11,7 @@ body {
 .rainbow {
     position: fixed;
     height: 100vh;
-    padding-top: 4.8em;
+    padding-top: 5em;
 }
 
 .box {
@@ -84,57 +84,63 @@ p {
     }
 }
 
-.home_title {
-    color: #2c2b30;
-    /* thank you CSS tricks for this little trick <3 
-    https://css-tricks.com/books/fundamental-css-tactics/scale-typography-screen-size/ */
-    font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1600 - 300)));
-    opacity: 0.8;
-    min-height: 100vh;
-    padding: 0em;
-    /* text-shadow: 0.03em 0.03em white; */
-    z-index: 10;
-}
-
 .name {
     position: fixed;
     top: 1em;
 }
 
-.about_title {
+.title_up {
     scroll-behavior: smooth;
     position: sticky;
-    top: 1.05em;
+    top: 1em;
     text-align: left;
 }
 
-.work_title {
+.title_down {
     scroll-behavior: smooth;
     position: sticky;
     top: 3em;
     text-align: left;
 }
 
+/* page title colors  */
+
+/* section header:nth-child(1) { 
+    text-shadow: 0.03em 0.03em #edc4bc;
+} */
+
+/* .about_title {
+    text-shadow: 0.03em 0.03em #edc4bc;
+}
+
+.work_title {
+    text-shadow: 0.03em 0.03em #b7e5d5;
+}
+
 .projects_title {
-    scroll-behavior: smooth;
-    position: sticky;
-    top: 3.8em;
-    text-align: left;
+    text-shadow: 0.03em 0.03em #b4d5f9;
 }
 
 .contact_title {
-    scroll-behavior: smooth;
-    position: sticky;
-    top: 4.9em;
-    text-align: left;
-}
+    text-shadow: 0.03em 0.03em #cfc5f6;
+} */
 
-.purple_title {
-    scroll-behavior: smooth;
-    position: sticky;
-    top: 5.7em;
-    text-align: left;
-}
+/* bottom right corner border */
+/* .pages {
+    display: flex;
+    position: fixed;
+    opacity: 0.8;
+    width: 48em;
+    height: 20em;
+    left: 70em;
+    top: 40em;
+    border: solid #2c2b30;
+    border-width: 0 0.2em 0.2em 0;
+    justify-content: center;
+    text-justify: center;
+    z-index: 10;
+
+} */
 
 /* arrow  */
 .arrow {
@@ -143,7 +149,8 @@ p {
     border-width: 0 0.05em 0.05em 0;
     display: inline-block;
     padding: 3px;
-    margin: 0 0 -9em 0;
+    /* text-shadow: 0.03em 0.03em white; */
+    margin: 0 0 5em 0;
   }
 
 .down {
